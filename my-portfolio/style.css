@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300&family=Montserrat:wght@300;400;500&family=Orbitron:wght@400;500&family=Varela+Round&display=swap');
+/* font-family: 'Barlow Semi Condensed', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Varela Round', sans-serif; */
+
+*,
+:before,
+:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    /* background: linear-gradient(#000, #000, #000); */
+    background: url(img/bg3.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.bg-color1{
+    background-color: #84d8ff;
+}
+.bg-color2{
+    background: #16161694;
+}
+.color1{
+    color:#84d8ff;
+}
+
+.main-blur-cont{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(1rem);
+    background: #ffffff00;
+}
+.main-btn{
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    background: #4d4d4d27;
+    backdrop-filter: blur(10px);
+    border: 1px solid white;
+    border-radius: 10rem;
+    color: #84d8ff;
+    padding: 1.5rem 3rem;
+    font-size: 1.8rem;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.2s;
+}
+.main-btn:hover{
+    letter-spacing: 0.1rem;
+    color: #ffffff;
+}
+
+nav{
+    position: relative;
+    z-index: 4;
+    padding: 2rem 1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav .logo{
+    flex-basis: 85%;
+}
+nav .logo a{
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+nav input[type="checkbox"]{
+    position: fixed;
+    right: 7rem;
+    width: 3.5rem;
+    height: 3rem;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 5;
+}
+nav span{
+    position: fixed;
+    right: 7rem;
+    width: 3rem;
+    height: 0.4rem;
+    pointer-events: none;
+    z-index: 5;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+}
+nav span:before{
+    content: '';
+    top: 2.25rem;
+    right: 7rem;
+    position: fixed;
+    width: 3.5rem;
+    height: inherit;
+    background: inherit;
+    border-radius: 2rem;
+    pointer-events: none;
+    transition: 0.1s;
+}
+nav span:after{
+    content: '';
+    top: 4.5rem;
+    right: 7rem;
+    position: fixed;
+    width: 2.5rem;
+    height: inherit;
+    background: inherit;
+    border-radius: 2rem;
+    pointer-events: none;
+    transition: 0.1s;
+}
+
+nav input[type="checkbox"]:checked ~ .nav-links{
+    transform: translateX(20%);
+}
+nav input[type="checkbox"]:checked ~ span{
+    background: white;
+    width: 3.5rem;
+}
+nav input[type="checkbox"]:checked ~ span:before{
+    top: 2.8rem;
+    width: 2rem;
+    right: 6.5rem;
+    transform: rotate(40deg);
+}
+nav input[type="checkbox"]:checked ~ span::after{
+    top: 4rem;
+    right: 6.5rem;
+    transform: rotate(-40deg);
+    width: 2rem;
+}
+
+
+nav .nav-links{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 40rem;
+    transform: translateX(110%);
+    backdrop-filter: blur(10px);
+    transition: transform 0.4s cubic-bezier(0.97, -0.07, 0, 1.33);
+}
+nav .nav-links ul{
+    /* height: 100%; */
+    margin-top: 8rem;
+    padding-left: 1rem;
+}
+.nav-links ul li{
+    list-style: none;
+    margin: 2rem;
+    width: 100%;
+}
+.nav-links ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+.nav-links ul li a:hover{
+    transform: translateX(1%);
+}
+
+header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 10rem;
+    margin-bottom: 25rem;
+}
+
+header .header-txt{
+    flex-basis: 50%;
+    /* background: red; */
+    margin-right: 7rem;
+    text-align: right;
+}
+
+header .header-txt h1{
+    font-size: 7rem;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0.6rem 0.3rem #1a1a1a;
+    margin-bottom: 3rem;
+    line-height: 7rem;
+    color: white;
+}
+.header-txt h1 span{
+    text-shadow: 0.4rem 0.3rem #000000;
+    letter-spacing: 0.3rem;
+}
+header .header-txt p{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.7rem;
+    letter-spacing: 0.1rem;
+    color: white;
+}
+header .header-txt a{
+    margin-top: 2.5rem;
+    margin-right: 1rem;
+}
+
+#about{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10rem;
+}
+#about .about-container{
+    position: relative;
+    width: 90%;
+    backdrop-filter: blur(1rem);
+    background: #b6b6b62f;
+    border: 3px solid #ffffffef;
+    padding: 3rem;
+    min-height: 35rem;
+}
+.about-container h1{
+    font-size: 3rem;
+    color: #ffffff;
+    width: 20rem;
+    padding-bottom: 0.5rem;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    border-bottom: 2px solid #ffffff;
+}
+.about-img-cont img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40rem;
+    height: 50rem;
+    object-fit: cover;
+    object-position: top;
+    /* border-radius: 50%; */
+}
+.about-img-cont p{
+    position: relative;
+    width: 75%;
+    margin-top: 5rem;
+    margin-right: 2rem;
+    color: white;
+    font-size: 1.7rem;
+    letter-spacing: 0.05rem;
+    word-spacing: 0.5rem;
+    line-height: 2.3rem;
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff00;
+    backdrop-filter: blur(1rem);
+}
+
+
+
+
+
+
+
+
