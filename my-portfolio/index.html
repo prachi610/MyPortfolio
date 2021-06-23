@@ -3,9 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Prachi Singh -Portfolio</title>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
@@ -20,12 +22,11 @@
         <span class="bg-color1"></span>
         <div class="nav-links bg-color2">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Resume</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#navigation">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#my-skills">Skills</a></li>
+                <li><a href="#my-projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
             </ul>
         </div>
     </nav>
@@ -36,14 +37,14 @@
             <h1>A <span class="color1">Software<br>Engineer</span></h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>autem voluptas inventore amet? Amet
                 temporiburi Ad neque aperiam <br>at sapiente nulla aspernatur laboriosam</p>
-            <a href="#" class="main-btn">View Details</a>
+            <a href="#about" class="main-btn">Who am I ?</a>
         </div>
         <!-- <div>prachi singh</div> -->
     </header>
 
     <section id="about">
         <div class="about-container">
-            <h1>About Me</h1>
+            <h1 class="section-heads">About Me</h1>
             <div class="about-img-cont">
                 <img src="./img/pic2.png" alt="prachi singh">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat commodi autem dolorum voluptatem
@@ -58,61 +59,128 @@
         </div>
     </section>
     <section id="my-skills">
+        <h1 class="section-heads">My Skills</h1>
         <div class="skill-container">
 
-            <div class="skill-card card1">
+            <div class="skill-card">
+                <div class="skill-bar">
+                    <div class="skill-bar-fill bg-color1" style="height: 90%;"></div>
+                    <img src="./img/html.png" alt="">
+                </div>
                 <h2 class="skill-name">HTML</h2>
-                <h1 class="skill-per-txt"></h1>
-                <div class="skill-bar">
-                    <div class="skill-bar-fill"></div>
-                </div>
             </div>
-            <div class="skill-card card2">
+            <div class="skill-card">
+                <div class="skill-bar">
+                    <div class="skill-bar-fill bg-color1" style="height: 85%;"></div>
+                    <img src="./img/css.png" alt="">
+                </div>
                 <h2 class="skill-name">CSS</h2>
-                <h1 class="skill-per-txt"></h1>
-                <div class="skill-bar">
-                    <div class="skill-bar-fill"></div>
-                </div>
             </div>
-            <div class="skill-card card3">
+            <div class="skill-card">
+                <div class="skill-bar">
+                    <div class="skill-bar-fill bg-color1" style="height: 85%;"></div>
+                    <img src="./img/java.png" alt="">
+                </div>
                 <h2 class="skill-name">JAVA</h2>
-                <h1 class="skill-per-txt"></h1>
-                <div class="skill-bar">
-                    <div class="skill-bar-fill"></div>
-                </div>
             </div>
-            <div class="skill-card card4">
+            <div class="skill-card">
+                <div class="skill-bar">
+                    <div class="skill-bar-fill bg-color1" style="height: 80%;"></div>
+                    <img src="./img/c.png" alt="">
+                </div>
                 <h2 class="skill-name">C</h2>
-                <h1 class="skill-per-txt"></h1>
-                <div class="skill-bar">
-                    <div class="skill-bar-fill"></div>
-                </div>
             </div>
-            <div class="skill-card card5">
-                <h2 class="skill-name">C++</h2>
-                <h1 class="skill-per-txt"></h1>
+            <div class="skill-card">
                 <div class="skill-bar">
-                    <div class="skill-bar-fill"></div>
+                    <div class="skill-bar-fill bg-color1" style="height: 60%;"></div>
+                    <img src="./img/react.png" alt="">
                 </div>
+                <h2 class="skill-name">React JS</h2>
             </div>
-            <div class="skill-card card6">
-                <h2 class="skill-name">PYTHON</h2>
-                <h1 class="skill-per-txt"></h1>
+            <div class="skill-card">
                 <div class="skill-bar">
-                    <div class="skill-bar-fill"></div>
+                    <div class="skill-bar-fill bg-color1" style="height: 70%;"></div>
+                    <img src="./img/data-str.png" alt="">
                 </div>
-            </div>
-            <div class="skill-card card7">
                 <h2 class="skill-name">DATA STRUCTURE<br>& ALGORITHM</h2>
-                <h1 class="skill-per-txt"></h1>
+            </div>
+            <div class="skill-card">
                 <div class="skill-bar">
-                    <div class="skill-bar-fill"></div>
+                    <div class="skill-bar-fill bg-color1" style="height: 85%;"></div>
+                    <img src="./img/git.png" alt="">
+                </div>
+                <h2 class="skill-name">Git</h2>
+            </div>
+            <div class="skill-card">
+                <div class="skill-bar">
+                    <div class="skill-bar-fill bg-color1" style="height: 65%;"></div>
+                    <img src="./img/problem-solving.png" alt="">
+                </div>
+                <h2 class="skill-name">Problem Solving</h2>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="my-projects">
+        <h2 class="section-heads">My Projects</h2>
+        <div class="project-container">
+            <div class="project-card">
+                <a href="#">
+                    <img src="./img/ludo-game.PNG" alt="">
+                </a>
+                <div class="project-text">
+                    <a href="#" class="color1">Ludo Game</a>
+                    <p>This is a Ludo Game made with HTML CSS & JAVASCRIPT</p>
                 </div>
             </div>
+            <hr>
+            <div class="project-card">
+                <a href="#">
+                    <img src="./img/ludo-game.PNG" alt="">
+                </a>
+                <div class="project-text">
+                    <a href="#" class="color1">Ludo Game</a>
+                    <p>This is a Ludo Game made with HTML CSS & JAVASCRIPT</p>
+                </div>
+            </div>
+            <hr>
+            <div class="project-card">
+                <a href="#">
+                    <img src="./img/ludo.PNG" alt="">
+                </a>
+                <div class="project-text">
+                    <a href="#" class="color1">Ludo Game</a>
+                    <p>This is a Ludo Game made with HTML CSS & JAVASCRIPT</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="contact">
+        <div class="ct-container">
+            <ul class="first-block">
+                <li>
+                    <a href="#">
+                        <i class="fab fa-linkedin"></i>
+                        Linkedin
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-github"></i>
+                        GitHub
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-envelope"></i>
+                        Email
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                        Twitter
+                    </a>
+                </li>
+            </ul>
         </div>
     </section>
 
 </body>
-
 </html>
