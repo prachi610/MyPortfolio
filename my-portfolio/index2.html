@@ -184,15 +184,20 @@
 
 <script>
 
-    let toggle = document.getElementById = ('nav-toggle');
-    let slidebar = document.getElementById = ('slidebar');
+//     let toggle = document.getElementById = ('nav-toggle');
+//     let slidebar = document.getElementById = ('slidebar');
 
-    document.onclick = function (e) {
-        if (e.target.id !== 'slidebar' && e.target.id !== 'toggle') {
-            slidebar.style.transform = "translateX(110%)";
-        }
-    }
-
+//     document.onclick = function (e) {
+//         if (e.target.id !== 'slidebar' && e.target.id !== 'toggle') {
+//             slidebar.style.transform = "translateX(110%)";
+//         }
+//     }
+var viewMode = getCookie("view-mode");
+if(viewMode == "desktop"){
+    viewport.setAttribute('content', 'width=1024');
+}else if (viewMode == "mobile"){
+    viewport.setAttribute('content', 'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no');
+}
 </script>
 
 </html>
