@@ -14,13 +14,14 @@ font-family: 'Varela Round', sans-serif; */
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
+    /* width: 100vw; */
 }
 body{
     background: linear-gradient(20deg, #6f95a7, #312c61);
     background-size: cover;
     background-attachment: fixed;
     overflow-x: hidden;
-    width: 100%;
+    /* width: inherit; */
 }
 .bg{
     background: #ffafbc;
@@ -29,14 +30,14 @@ body{
     color:#ffafbc;
 }
 
-.main-blur-cont{
+/* .main-blur-cont{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     background: #ffffff00;
-}
+} */
 .main-btn{
     position: relative;
     display: inline-block;
@@ -76,7 +77,7 @@ nav{
     position: relative;
     z-index: 4;
     padding: 2rem 1rem;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     display: flex;
     align-items: center;
@@ -178,7 +179,6 @@ nav .nav-links{
     transition: transform 0.4s cubic-bezier(0.97, -0.07, 0, 1.33);
 }
 nav .nav-links ul{
-    /* height: 100%; */
     margin-top: 8rem;
     padding-left: 1rem;
 }
@@ -206,8 +206,6 @@ header{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 100%;
-    height: 100%;
     overflow: hidden;
     margin-top: 10rem;
     margin-bottom: 20rem;
@@ -256,8 +254,6 @@ header .header-txt a{
 
 #about{
     position: relative;
-    height: 100%;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -307,8 +303,6 @@ header .header-txt a{
 
 #my-skills{
     position: relative;
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -316,20 +310,19 @@ header .header-txt a{
 }
 #my-skills h1{
     margin-bottom: 3rem;
-    margin-left: 5rem;
+    margin-left: 3rem;
     text-align: center;
 }
 #my-skills .skill-container{
     width: 100%;
-    /* min-height: 45rem; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 5rem;
+    padding: 0 10rem;
 }
 .skill-container .skill-bar{
     width: 100%;
-    max-width: 110rem;
+    /* max-width: 110rem; */
     height: 7rem;
     border-radius: 5rem 0 0 5rem;
     background-color: #ffffff;
@@ -374,8 +367,6 @@ header .header-txt a{
 
 #my-projects{
     position: relative;
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -389,6 +380,7 @@ header .header-txt a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 4rem;
 }
 .project-container .pro-card{
     display: flex;
@@ -396,10 +388,10 @@ header .header-txt a{
     flex-wrap: wrap;
     align-items: center;
     padding: 1rem;
-    margin: 5rem;
+    margin: 5rem 7rem;
 }
 .project-container .span-pts{
-    width: 100%;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -440,13 +432,13 @@ header .header-txt a{
 }
 .pro-text .pro-detail{
     color: #c5ffbd;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     letter-spacing: 0.1rem;
     word-spacing: 0.6rem;
     font-family: 'Montserrat', sans-serif;
 }
 .pro-card .pro-img{
-    width: 45%;
+    width: 40%;
     max-width: 42rem;
     min-width: 25rem;
 }
@@ -459,6 +451,7 @@ header .header-txt a{
 /* $$$$$$$$$$$$$$$ Contact ################# */
 
 #contact{
+    width: 100vw;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -469,9 +462,7 @@ header .header-txt a{
     text-align: center;
 }
 ul.contact-links{
-    width: 100%;
     max-width: 70rem;
-    height: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -506,7 +497,7 @@ ul.contact-links{
 
 footer.copyright-content{
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 5rem;
     display: flex;
     justify-content: center;
@@ -538,11 +529,9 @@ footer.copyright-content{
         width: 80rem;
     }
     .about-img-cont img{
-        height: 35rem;
         width: 30rem;
     }
     .pro-card{
-        border-radius: 1rem;
         background: linear-gradient(90deg, #00000000, #00000059, #00000000);
     }
 }
@@ -560,30 +549,12 @@ footer.copyright-content{
     }
     
     header .header-txt h1{
-
         font-size: 6rem;
     }
-    .header-txt h1 span{
-        text-shadow: 0.2rem 0.4rem #000000;
-        letter-spacing: 0.3rem;
-        color: #ff6584;
+    #my-skills .skill-container{
+        padding: 0 5rem;
     }
-    header .header-txt p{
-        /* background: #ffffff57;
-        padding: 0.5rem; */
-    }
-
-    #about{
-        position: relative;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-top: 10rem;
-        margin-bottom: 6rem;
-    }
-    #about .about-container{
+    /* #about .about-container{
         position: relative;
         width: 90%;
         max-width: 110rem;
@@ -611,24 +582,18 @@ footer.copyright-content{
         padding: 1rem;
         font-family: 'Montserrat', sans-serif;
         background-color: #ffffff00;
-    }
+    } */
 
 
     .project-container .pro-card{
+        width: 75%;
         border-radius: 0;
         position: relative;
         justify-content: center;
-        margin: 4rem 10%;
         padding: 3rem;
         background: linear-gradient(#00000000, #0000005d, #00000000);
         border: 1px solid #000000;
         box-shadow: 0.1rem 0.2rem 3rem #000000aa;
-    }
-    .project-container .span-pts{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
     .span-pts .pts{
         margin: 0 0.5rem;
@@ -641,8 +606,8 @@ footer.copyright-content{
         background: #ff6584;
     }
     .pro-text{
-        width: 55%;
-        min-width: none;
+        width: 80%;
+        min-width: 0;
         text-align: center;
         margin-left: 0;
         margin-top: 1.5rem;
@@ -660,19 +625,18 @@ footer.copyright-content{
     }
     #pro-card-mid .pro-img{
         position: relative;
-        bottom: 19rem;
+        top: -15rem;
         left: 0;
-
     }
     #pro-card-mid .pro-text{
         position: relative;
-        top: 30rem;
+        top: 27rem;
         left: 0;
     }
     .pro-card .pro-img{
         width: 50%;
         max-width: 42rem;
-        min-width: 40rem;
+        min-width: 35rem;
     }
     .pro-card img{
         border-radius: 0;
@@ -680,12 +644,53 @@ footer.copyright-content{
 }
 
 @media (max-width: 640px){
+    html{
+        font-size: 55%;
+    }
+    .left-bx{
+        width: 0;
+        height: 0;
+    }
     
+    .section-heads{
+        font-size: 4rem;
+        color: #fff;
+        width: 100%;
+        border-bottom: none;
+    }
+    #my-skills h1{
+        margin-left: 0;
+    }
+    header{
+        margin-bottom: 5rem;
+    }
+    header .header-txt{
+        margin-right: 0;
+        width: 100%;
+        margin: 3rem 0;
+        text-align: center;
+    }
+    header .header-txt h1{
+        font-size: 9.2vw;
+    }
+    .header-txt h1 span{
+        text-shadow: 0.1rem 0.1rem #000000;
+        letter-spacing: 0.1rem;
+    }
+    header .header-txt p{
+        font-size: 1.7rem;
+        padding: 0 3rem;
+    }
+    header .header-txt a{
+        margin-top: 2.5rem;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
     #my-skills{
         margin-bottom: 5rem;
     }
     #my-skills .skill-container{
-        padding: 0 2rem;
+        padding: 0 3rem;
     }
     .skill-container .skill-bar{
         width: 100%;
@@ -699,5 +704,48 @@ footer.copyright-content{
     }
     .skill-bar img{
         opacity: 0;
+    }
+    .project-container .pro-card{
+        width: 85%;
+        padding: 3rem 2rem;
+        margin: 3rem 0;
+    }
+    .pro-card .pro-text{
+        width: 100%;
+        padding: 0 1rem;
+        min-width: 0;
+    }
+    .pro-card .pro-img{
+        width: 90%;
+        max-width: 42rem;
+        min-width: 0;
+    }
+    .pro-text .pro-head{
+        font-size: 4.4rem;
+    }
+    #pro-card-mid {
+        height: 53rem;
+    }
+    #pro-card-mid .pro-img{
+        bottom: 14rem;
+    }
+    #pro-card-mid .pro-text{
+        top: 30rem;
+    }
+}
+@media (max-width: 460px){
+    #pro-card-mid{
+        height: 50rem;
+    }
+    #pro-card-mid .pro-img{
+        position: absolute;
+        top: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #pro-card-mid .pro-text{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
