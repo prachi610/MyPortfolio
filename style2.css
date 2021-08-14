@@ -1,0 +1,783 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300&family=Montserrat:wght@300;400;500&family=Orbitron:wght@400;500&family=Varela+Round&display=swap');
+/* font-family: 'Barlow Semi Condensed', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Varela Round', sans-serif; */
+
+*,
+:before,
+:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    /* width: 100vw; */
+}
+body{
+    background: linear-gradient(20deg, #6f95a7, #312c61);
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    /* width: inherit; */
+}
+.bg{
+    background: #ffafbc;
+}
+.color1{
+    color:#ffafbc;
+}
+
+/* .main-blur-cont{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background: #ffffff00;
+} */
+.main-btn{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    background: #ff6584;
+    color: #fff;
+    border: 2px solid #0e0e0e;
+    box-shadow: 0.2rem 0.5rem #000000;
+    border-radius: 1.2rem;
+    padding: 1.5rem 3rem;
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.2s;
+}
+.main-btn:hover{
+    box-shadow: 0.2rem 0.5rem 2rem #000000ab;
+    transform: translateY(-0.4rem) translateX(-0.1rem);
+}
+.main-btn:active{
+    top: 0.4rem;
+    left: 0.1rem;
+    box-shadow: 0.1rem 0.1rem #000000;
+}
+
+.left-bx{
+    position: absolute;
+    bottom: 0;
+    left: -4rem;
+    width: 80%;
+    max-width: 100rem;
+    min-width: 46rem;
+}
+
+nav{
+    position: relative;
+    z-index: 4;
+    padding: 2rem 1rem;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav .logo{
+    flex-basis: 85%;
+}
+nav .logo a{
+    text-decoration: none;
+    font-size: 2.5rem !important;
+    font-family: 'Orbitron', sans-serif;
+    /* background: #ffafbc; */
+    color: #ffffff;
+    padding: 0 .5rem;
+}
+
+nav input[type="checkbox"]{
+    position: fixed;
+    right: 6%;
+    width: 3.5rem;
+    height: 3rem;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 5;
+}
+nav span{
+    position: fixed;
+    right: 6%;
+    width: 3rem;
+    height: 0.4rem;
+    pointer-events: none;
+    z-index: 5;
+    border-radius: 2rem;
+    transition: transform 0.3s ease;
+    box-shadow: 0.1rem 0.3rem #fff;
+}
+nav span:before{
+    content: '';
+    top: 2.25rem;
+    right: 6%;
+    position: fixed;
+    width: 3.5rem;
+    height: inherit;
+    background: inherit;
+    border-radius: 2rem;
+    pointer-events: none;
+    transition: 0.2s;
+    box-shadow: 0.1rem 0.3rem #fff;
+}
+nav span:after{
+    content: '';
+    top: 4.5rem;
+    right: 6%;
+    position: fixed;
+    width: 2.5rem;
+    height: inherit;
+    background: inherit;
+    border-radius: 2rem;
+    pointer-events: none;
+    transition: 0.2s;
+    box-shadow: 0.1rem 0.3rem #fff;
+}
+
+nav input[type="checkbox"]:checked ~ .nav-links{
+    transform: translateX(20%);
+}
+nav input[type="checkbox"]:checked ~ span{
+    background: #ffffff;
+    box-shadow: none;
+    width: 3.5rem;
+    right: 5.8%;
+}
+nav input[type="checkbox"]:checked ~ span:before{
+    top: 2.8rem;
+    width: 2rem;
+    right: 5.6%;
+    box-shadow: none;
+    transform: rotate(40deg);
+}
+nav input[type="checkbox"]:checked ~ span::after{
+    top: 4rem;
+    right: 5.6%;
+    box-shadow: none;
+    transform: rotate(-40deg);
+    width: 2rem;
+}
+
+
+nav .nav-links{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 40rem;
+    background: #ff6584;
+    border-left: 5px solid white;
+    transform: translateX(110%);
+    transition: transform 0.4s cubic-bezier(0.97, -0.07, 0, 1.33);
+}
+nav .nav-links ul{
+    margin-top: 8rem;
+    padding-left: 1rem;
+}
+.nav-links ul li{
+    list-style: none;
+    margin: 2rem;
+    width: 100%;
+}
+.nav-links ul li a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    /* transition: all 0.6s ease; */
+}
+.nav-links ul li a:hover{
+    left: 1rem;
+    font-size: 2.7rem;
+}
+
+header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+    margin-top: 10rem;
+    margin-bottom: 20rem;
+}
+
+header .header-txt{
+    margin-right: 6%;
+    text-align: right;
+}
+
+header .header-txt h1{
+    font-size: 6.8rem;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0.2rem 0.2rem #000000;
+    margin-bottom: 3rem;
+    color: #ffffff;
+}
+.header-txt h1 span{
+    text-shadow: 0.2rem 0.4rem #000000;
+    letter-spacing: 0.3rem;
+    color: #ff6584;
+}
+header .header-txt p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.6rem;
+    font-weight: 500;
+    font-style: italic;
+    color: #000000;
+}
+header .header-txt a{
+    margin-top: 2.5rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+
+.section-heads{
+    font-size: 5rem;
+    color: #fff;
+    width: 29rem;
+    padding-bottom: 0.5rem;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    border-bottom: 5px solid #ffffff;
+}
+
+#about{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10rem;
+    margin-bottom: 10rem;
+}
+#about .about-container{
+    position: relative;
+    width: 90%;
+    max-width: 110rem;
+    background: #ff6584;
+    border: 5px solid #ffffff;
+    border-radius: 2rem 2rem 0 2rem;
+    padding: 3rem;
+    min-height: 35rem;
+}
+.about-container h1{
+    color: #ffffff;
+    border-bottom: 5px solid #ffffff;
+}
+.about-img-cont img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40rem;
+    height: 50rem;
+    object-fit: cover;
+    object-position: top;
+}
+.about-img-cont p{
+    position: relative;
+    width: 75%;
+    margin-top: 5rem;
+    margin-right: 2rem;
+    color: #fff;
+    font-size: 1.6rem;
+    letter-spacing: 0.09rem;
+    word-spacing: 0.5rem;
+    line-height: 2.8rem;
+    font-weight: 500;
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff00;
+}
+
+/* ############ Skills Page Styling $$$$$$$$$$$ */
+
+#my-skills{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10rem;
+}
+#my-skills h1{
+    margin-bottom: 3rem;
+    margin-left: 3rem;
+    text-align: center;
+}
+#my-skills .skill-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10rem;
+}
+.skill-container .skill-bar{
+    width: 100%;
+    /* max-width: 110rem; */
+    height: 7rem;
+    border-radius: 5rem 0 0 5rem;
+    background-color: #ffffff;
+    border: 5px solid #ffffff;
+    margin-bottom: 2rem;
+    position: relative;
+    /* overflow: hidden; */
+}
+.skill-bar .skill-progress{
+    position: absolute;
+    height: 100%;
+    left: 0;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #ffffff, #060b30);
+}
+.skill-bar .skill-name{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 2rem;
+    font-size: 1.8rem;
+    color: #060b30;
+    font-family: 'Montserrat', sans-serif;
+}
+.skill-bar img{
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 2rem;
+    width: 5rem;
+    object-fit: cover;
+}
+
+
+
+
+
+
+/* @@@@@@@@@@@@@ Project Section Styling %%%%%%%%%%%%% */
+
+#my-projects{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10rem;
+}
+#my-projects h1{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+#my-projects .project-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 4rem;
+}
+.project-container .pro-card{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+    margin: 5rem 7rem;
+}
+.project-container .span-pts{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.span-pts .pts{
+    margin: 0 0.5rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+.span-pts .pts:nth-child(2){
+    background: #ff6584;
+}
+.pro-card a{
+    display: inline-block;
+    text-decoration: none;
+}
+.pro-text{
+    width: 40%;
+    min-width: 40rem;
+    margin-left: 2rem;
+}
+.pro-card:first-of-type .pro-text{
+    text-align: right;
+    margin-right: 2rem;
+}
+.pro-card:last-of-type .pro-text{
+    text-align: right;
+    margin-right: 2rem;
+}
+.pro-text .pro-head{
+    color: #161616;
+    font-weight: 900;
+    font-size: 5.5rem;
+    letter-spacing: -0.2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.pro-text .pro-detail{
+    color: #c5ffbd;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.6rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.pro-card .pro-img{
+    width: 40%;
+    max-width: 42rem;
+    min-width: 25rem;
+}
+.pro-card img{
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: .2rem .4rem 4rem #0000005b;
+}
+
+/* $$$$$$$$$$$$$$$ Contact ################# */
+
+#contact{
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#contact h1{
+    text-align: center;
+}
+ul.contact-links{
+    max-width: 70rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    list-style-type: none;
+}
+#contact ul li{
+    margin: 2rem;
+}
+#contact ul li a{
+    text-decoration: none;
+    font-size: 2.2rem;
+    color: #001824;
+    font-family: 'Varela Round', sans-serif;
+    text-align: center;
+    transition: 0.2s;
+}
+#contact ul li a i{
+    font-size: 3rem;
+    color: #001824;
+    transition: 0.2s;
+}
+#contact ul li a:hover{
+    color: #ffffff;
+}
+#contact ul li a:hover i{
+    color: #ffffff;
+}
+
+/* *********** Footer %%%%%%%%%%%%%%%%% */
+
+footer.copyright-content{
+    position: relative;
+    width: 100vw;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000a1;
+}
+.copyright-content p{
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1007px){
+    
+    html{
+        font-size: 59%;
+    }
+    .left-bx{
+        width: 80rem;
+    }
+    .about-img-cont img{
+        width: 30rem;
+    }
+    .pro-card{
+        background: linear-gradient(90deg, #00000000, #00000059, #00000000);
+    }
+}
+@media (max-width: 890px){
+    html{
+        font-size: 57%;
+    }
+    .left-bx{
+        width: 60rem;
+    }
+
+    header .header-txt{
+        width: 90%;
+        margin-right: 4%;
+    }
+    
+    header .header-txt h1{
+        font-size: 6rem;
+    }
+    #my-skills .skill-container{
+        padding: 0 5rem;
+    }
+    /* #about .about-container{
+        position: relative;
+        width: 90%;
+        max-width: 110rem;
+        background: #ff6584;
+        border: 5px solid #ffffff;
+        border-radius: 2rem 2rem 0 2rem;
+        padding: 3rem;
+        min-height: 35rem;
+    }
+    .about-img-cont img{
+        height: 35rem;
+        width: 30rem;
+    }
+    .about-img-cont p{
+        position: relative;
+        width: 75%;
+        margin-top: 5rem;
+        margin-right: 2rem;
+        color: #fff;
+        font-size: 1.6rem;
+        letter-spacing: 0.09rem;
+        word-spacing: 0.5rem;
+        line-height: 2.8rem;
+        font-weight: 500;
+        padding: 1rem;
+        font-family: 'Montserrat', sans-serif;
+        background-color: #ffffff00;
+    } */
+
+
+    .project-container .pro-card{
+        width: 75%;
+        border-radius: 0;
+        position: relative;
+        justify-content: center;
+        padding: 3rem;
+        background: linear-gradient(#00000000, #0000005d, #00000000);
+        border: 1px solid #000000;
+        box-shadow: 0.1rem 0.2rem 3rem #000000aa;
+    }
+    .span-pts .pts{
+        margin: 0 0.5rem;
+        width: 3rem;
+        height: 0.4rem;
+        border-radius: 0;
+        background-color: #ffffff;
+    }
+    .span-pts .pts:nth-child(2){
+        background: #ff6584;
+    }
+    .pro-text{
+        width: 80%;
+        min-width: 0;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 1.5rem;
+    }
+    .pro-card:first-of-type .pro-text{
+        margin-right: 0;
+        text-align: center;
+    }
+    .pro-card:last-of-type .pro-text{
+        margin-right: 0;
+        text-align: center;
+    }
+    #pro-card-mid{
+        position: relative;
+    }
+    #pro-card-mid .pro-img{
+        position: relative;
+        top: -15rem;
+        left: 0;
+    }
+    #pro-card-mid .pro-text{
+        position: relative;
+        top: 27rem;
+        left: 0;
+    }
+    .pro-card .pro-img{
+        width: 50%;
+        max-width: 42rem;
+        min-width: 35rem;
+    }
+    .pro-card img{
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 640px){
+    html{
+        font-size: 55%;
+    }
+    .left-bx{
+        width: 0;
+        height: 0;
+    }
+    
+    .section-heads{
+        font-size: 4rem;
+        color: #fff;
+        width: 100%;
+        border-bottom: none;
+    }
+    #my-skills h1{
+        margin-left: 0;
+    }
+    nav .nav-links{
+        width: 115%;
+        border: none;
+    }
+    nav .nav-links ul{
+        width: 92.5%;
+        height: 75%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .nav-links ul li{
+        margin: 1.5rem 0;
+        text-align: center;
+    }
+    .nav-links ul li a{
+        position: relative;
+        text-decoration: none;
+        color: white;
+        font-size: 2.5rem;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+    }
+    .nav-links ul li a:hover{
+        left: 0;
+        font-size: 2.7rem;
+    }
+    
+    nav input[type="checkbox"]:checked ~ .nav-links{
+        transform: translateX(12%);
+    }
+    header{
+        margin-bottom: 5rem;
+    }
+    header .header-txt{
+        margin-right: 0;
+        width: 100%;
+        margin: 3rem 0;
+        text-align: center;
+    }
+    header .header-txt h1{
+        font-size: 9.2vw;
+    }
+    .header-txt h1 span{
+        text-shadow: 0.1rem 0.1rem #000000;
+        letter-spacing: 0.1rem;
+    }
+    header .header-txt p{
+        font-size: 1.7rem;
+        padding: 0 3rem;
+    }
+    header .header-txt a{
+        margin-top: 2.5rem;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+    #my-skills{
+        margin-bottom: 5rem;
+    }
+    #my-skills .skill-container{
+        padding: 0 3rem;
+    }
+    .skill-container .skill-bar{
+        width: 100%;
+        max-width: 110rem;
+        height: 4rem;
+        border-radius: 5rem 0 0 5rem;
+        background-color: #ffffff;
+        border: 0;
+        margin-bottom: 3rem;
+        position: relative;
+    }
+    .skill-bar img{
+        opacity: 0;
+    }
+    .project-container .pro-card{
+        width: 85%;
+        padding: 3rem 2rem;
+        margin: 3rem 0;
+    }
+    .pro-card .pro-text{
+        width: 100%;
+        padding: 0 1rem;
+        min-width: 0;
+    }
+    .pro-card .pro-img{
+        width: 90%;
+        max-width: 42rem;
+        min-width: 0;
+    }
+    .pro-text .pro-head{
+        font-size: 4.4rem;
+    }
+    #pro-card-mid {
+        height: 53rem;
+    }
+    #pro-card-mid .pro-img{
+        bottom: 14rem;
+    }
+    #pro-card-mid .pro-text{
+        top: 30rem;
+    }
+}
+@media (max-width: 460px){
+    #pro-card-mid{
+        height: 50rem;
+    }
+    #pro-card-mid .pro-img{
+        position: absolute;
+        top: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #pro-card-mid .pro-text{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
