@@ -661,6 +661,7 @@ footer.copyright-content{
     #my-skills h1{
         margin-left: 0;
     }
+
     nav .nav-links{
         width: 115%;
         border: none;
@@ -717,6 +718,10 @@ footer.copyright-content{
         margin-top: 2.5rem;
         margin-right: 0;
         margin-bottom: 2rem;
+    }
+    .about-img-cont p{
+        width:100%;
+        text-align: justify;
     }
     #my-skills{
         margin-bottom: 5rem;
