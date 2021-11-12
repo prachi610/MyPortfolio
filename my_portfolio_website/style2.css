@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300&family=Montserrat:wght@300;400;500&family=Orbitron:wght@400;500&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
 /* font-family: 'Barlow Semi Condensed', sans-serif;
 font-family: 'Montserrat', sans-serif;
 font-family: 'Orbitron', sans-serif;
 font-family: 'Varela Round', sans-serif; */
+/* font-family: 'Yeseva One', cursive; */
 
 *,
 :before,
@@ -71,6 +73,9 @@ body{
     width: 80%;
     max-width: 100rem;
     min-width: 46rem;
+}
+.back-svg{
+    display: none;
 }
 
 nav{
@@ -158,6 +163,11 @@ nav input[type="checkbox"]:checked ~ span:before{
     box-shadow: none;
     transform: rotate(40deg);
 }
+nav input[type="checkbox"]:hover ~ span,
+nav input[type="checkbox"]:hover ~ span:before,
+nav input[type="checkbox"]:hover ~ span:after{
+    box-shadow: 1px 1px 0 #ffffff;
+}
 nav input[type="checkbox"]:checked ~ span::after{
     top: 4rem;
     right: 5.6%;
@@ -194,11 +204,10 @@ nav .nav-links ul{
     font-size: 2.5rem;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    /* transition: all 0.6s ease; */
+    transition: all 0.2s ease;
 }
 .nav-links ul li a:hover{
-    left: 1rem;
-    font-size: 2.7rem;
+    margin-left: 1rem;
 }
 
 header{
@@ -218,7 +227,7 @@ header .header-txt{
 
 header .header-txt h1{
     font-size: 6.8rem;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Yeseva One', cursive;
     text-shadow: 0.2rem 0.2rem #000000;
     margin-bottom: 3rem;
     color: #ffffff;
@@ -554,35 +563,41 @@ footer.copyright-content{
     #my-skills .skill-container{
         padding: 0 5rem;
     }
-    /* #about .about-container{
-        position: relative;
-        width: 90%;
-        max-width: 110rem;
-        background: #ff6584;
-        border: 5px solid #ffffff;
-        border-radius: 2rem 2rem 0 2rem;
-        padding: 3rem;
-        min-height: 35rem;
+        
+    #about .about-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .about-container h1{
+        color: #ffffff;
+        border-bottom: 2px solid #ffffff;
+        font-size: 3.5rem;
+        text-align: center;
+        width: 18rem;
+    }
+    .about-img-cont{
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .about-img-cont img{
-        height: 35rem;
-        width: 30rem;
+        position: relative;
+        width: 25rem;
+        height: 25rem;
+        border-radius: 50%;
+        background-color: #ff8b9a;
     }
     .about-img-cont p{
-        position: relative;
-        width: 75%;
-        margin-top: 5rem;
-        margin-right: 2rem;
-        color: #fff;
-        font-size: 1.6rem;
-        letter-spacing: 0.09rem;
-        word-spacing: 0.5rem;
-        line-height: 2.8rem;
-        font-weight: 500;
-        padding: 1rem;
-        font-family: 'Montserrat', sans-serif;
-        background-color: #ffffff00;
-    } */
+        width: 90%;
+        margin-top: 2rem;
+        margin-right: 0;
+        text-align: center;
+    }
+
 
 
     .project-container .pro-card{
@@ -647,9 +662,23 @@ footer.copyright-content{
     html{
         font-size: 55%;
     }
+    nav input, .nav-links, #nav-toggle{
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
     .left-bx{
         width: 0;
         height: 0;
+    }
+    
+    .back-svg{
+        display: inline-block;
+        position: fixed;
+        bottom: -20%;
+        right: -5rem;
+        width: 90%;
+        transform: rotate(90deg);
     }
     
     .section-heads{
@@ -661,53 +690,22 @@ footer.copyright-content{
     #my-skills h1{
         margin-left: 0;
     }
-
-    nav .nav-links{
-        width: 115%;
-        border: none;
-    }
-    nav .nav-links ul{
-        width: 92.5%;
-        height: 75%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .nav-links ul li{
-        margin: 1.5rem 0;
-        text-align: center;
-    }
-    .nav-links ul li a{
-        position: relative;
-        text-decoration: none;
-        color: white;
-        font-size: 2.5rem;
-        font-family: 'Montserrat', sans-serif;
-        text-transform: uppercase;
-    }
-    .nav-links ul li a:hover{
-        left: 0;
-        font-size: 2.7rem;
-    }
-    
-    nav input[type="checkbox"]:checked ~ .nav-links{
-        transform: translateX(12%);
-    }
     header{
-        margin-bottom: 5rem;
+        margin: 0;
+        margin-top: -5rem;
+        height: 100vh;
     }
     header .header-txt{
         margin-right: 0;
-        width: 100%;
-        margin: 3rem 0;
+        width: 90%;
+        margin: 3rem auto;
         text-align: center;
     }
     header .header-txt h1{
         font-size: 9.2vw;
     }
     .header-txt h1 span{
-        text-shadow: 0.1rem 0.1rem #000000;
+        text-shadow: 0 0 0.5rem #000000;
         letter-spacing: 0.1rem;
     }
     header .header-txt p{
@@ -771,6 +769,10 @@ footer.copyright-content{
     }
 }
 @media (max-width: 460px){
+    
+    header .header-txt h1{
+        font-size: 11vw;
+    }
     #pro-card-mid{
         height: 50rem;
     }
